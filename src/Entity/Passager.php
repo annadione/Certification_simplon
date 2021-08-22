@@ -104,33 +104,41 @@ class Passager
         return $this;
     }
 
-    /**
-     * @return Collection|Reservation[]
-     */
-    public function getReservations(): Collection
+    // /**
+    //  * @return Collection|Reservation[]
+    //  */
+    // public function getReservations(): Collection
+    // {
+    //     return $this->reservations;
+    // }
+
+    // public function addReservation(Reservation $reservation): self
+    // {
+    //     if (!$this->reservations->contains($reservation)) {
+    //         $this->reservations[] = $reservation;
+    //         $reservation->setPassager($this);
+    //     }
+
+    //     return $this;
+    // }
+
+    // public function removeReservation(Reservation $reservation): self
+    // {
+    //     if ($this->reservations->removeElement($reservation)) {
+    //         // set the owning side to null (unless already changed)
+    //         if ($reservation->getPassager() === $this) {
+    //             $reservation->setPassager(null);
+    //         }
+    //     }
+
+    //     return $this;
+    // }
+    public function __toString()
     {
-        return $this->reservations;
-    }
-
-    public function addReservation(Reservation $reservation): self
-    {
-        if (!$this->reservations->contains($reservation)) {
-            $this->reservations[] = $reservation;
-            $reservation->setPassager($this);
-        }
-
-        return $this;
-    }
-
-    public function removeReservation(Reservation $reservation): self
-    {
-        if ($this->reservations->removeElement($reservation)) {
-            // set the owning side to null (unless already changed)
-            if ($reservation->getPassager() === $this) {
-                $reservation->setPassager(null);
-            }
-        }
-
-        return $this;
-    }
+    
+    return strval($this->getPrenom());
 }
+
+    
+}
+

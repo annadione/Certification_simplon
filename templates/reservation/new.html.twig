@@ -3,9 +3,10 @@
 {% block title %}New Reservation{% endblock %}
 
 {% block body %}
-    <h1>Create new Reservation</h1>
-
+<section class="container d-flex align-items-center justify-content-between" style="margin-top:100px;">   <div class="col-md-6">
+    <h1>Ajouter une  reservation</h1>
+</section>
     {{ include('reservation/_form.html.twig') }}
 
-    <a href="{{ path('reservation_index') }}">back to list</a>
+    <a href="{{ path('reservation_index') }}">Retour à la liste</a>
 {% endblock %}

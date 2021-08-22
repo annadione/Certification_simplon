@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Passager index{% endblock %}
+{% block title %}Les passagers{% endblock %}
 
 {% block body %}
-    <h1>Passager index</h1>
-
+<section class="container d-flex align-items-center justify-content-between" style="margin-top:100px;">   <div class="col-md-6">
+    <h1>Liste des passagers </h1>
+</section>
     <table class="table">
         <thead>
             <tr>
@@ -31,11 +32,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">retour à la liste</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('passager_new') }}">Create new</a>
+    <a href="{{ path('passager_new') }}">Creer un passagers</a>
 {% endblock %}

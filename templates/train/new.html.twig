@@ -3,9 +3,10 @@
 {% block title %}New Train{% endblock %}
 
 {% block body %}
-    <h1>Create new Train</h1>
-
+<section class="container d-flex align-items-center justify-content-between" style="margin-top:100px;">   <div class="col-md-6">
+    <h1>Nouveau Train</h1>
+</section>
     {{ include('train/_form.html.twig') }}
 
-    <a href="{{ path('train_index') }}">back to list</a>
+    <a href="{{ path('train_index') }}">retour à la liste</a>
 {% endblock %}

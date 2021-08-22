@@ -3,7 +3,7 @@
 {% block title %}Trajet{% endblock %}
 
 {% block body %}
-    <h1>Trajet</h1>
+    <h1>Liste des tajets trajets</h1>
 
     <table class="table">
         <tbody>
@@ -38,7 +38,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('trajet_index') }}">back to list</a>
+    <a href="{{ path('trajet_index') }}">Retour à la liste</a>
 
     <a href="{{ path('trajet_edit', {'id': trajet.id}) }}">edit</a>
 

@@ -145,43 +145,48 @@ class Trajet
 
     public function getTrain(): ?Train
     {
-        return $this->train;
+     return $this->train;
     }
 
     public function setTrain(?Train $train): self
     {
         $this->train = $train;
 
-        return $this;
-    }
+         return $this;
+     }
 
     /**
      * @return Collection|Reservation[]
      */
-    public function getRelation(): Collection
-    {
-        return $this->relation;
-    }
+    // public function getRelation(): Collection
+    // {
+    //     return $this->relation;
+    // }
 
-    public function addRelation(Reservation $relation): self
-    {
-        if (!$this->relation->contains($relation)) {
-            $this->relation[] = $relation;
-            $relation->setTrajet($this);
-        }
+    // public function addRelation(Reservation $relation): self
+    // {
+    //     if (!$this->relation->contains($relation)) {
+    //         $this->relation[] = $relation;
+    //         $relation->setTrajet($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeRelation(Reservation $relation): self
-    {
-        if ($this->relation->removeElement($relation)) {
-            // set the owning side to null (unless already changed)
-            if ($relation->getTrajet() === $this) {
-                $relation->setTrajet(null);
-            }
-        }
+    // public function removeRelation(Reservation $relation): self
+    // {
+    //     if ($this->relation->removeElement($relation)) {
+    //         // set the owning side to null (unless already changed)
+    //         if ($relation->getTrajet() === $this) {
+    //             $relation->setTrajet(null);
+    //         }
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
+        public function __toString()
+        {
+      
+        return strval($this->getLieuArrivee());
+}
 }

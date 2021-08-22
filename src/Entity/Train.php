@@ -53,35 +53,34 @@ class Train
         return $this;
     }
 
-    /**
-     * @return Collection|Trajet[]
-     */
-    public function getTrajets(): Collection
-    {
-        return $this->trajets;
-    }
+    // /**
+    //  * @return Collection|Trajet[]
+    //  */
+    // public function getTrajets(): Collection
+    // {
+    //     return $this->trajets;
+    // }
 
-    public function addTrajet(Trajet $trajet): self
-    {
-        if (!$this->trajets->contains($trajet)) {
-            $this->trajets[] = $trajet;
-            $trajet->setTrain($this);
-        }
+    // public function addTrajet(Trajet $trajet): self
+    // {
+    //     if (!$this->trajets->contains($trajet)) {
+    //         $this->trajets[] = $trajet;
+    //         $trajet->setTrain($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeTrajet(Trajet $trajet): self
-    {
-        if ($this->trajets->removeElement($trajet)) {
-            // set the owning side to null (unless already changed)
-            if ($trajet->getTrain() === $this) {
-                $trajet->setTrain(null);
-            }
-        }
+    // public function removeTrajet(Trajet $trajet): self
+    // {
+    //     if ($this->trajets->removeElement($trajet)) {
+    //         // set the owning side to null (unless already changed)
+    //         if ($trajet->getTrain() === $this) {
+    //             $trajet->setTrain(null);
+    //         }
+    //     }
 
-        return $this;
-    }
+    //     return $this;
     public function __toString()
     {
         return strval($this->getNumeroTrain());
